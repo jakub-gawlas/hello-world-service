@@ -7,7 +7,8 @@ const router = new Router();
 
 router.get('/', (ctx, next) => {
   ctx.body = {
-    message: 'Hello World!'
+    message: 'Hello World!',
+    travis: 'done'
   };
 });
 
