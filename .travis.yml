@@ -1,13 +1,13 @@
 sudo: required
-
 services:
-  - docker
-
+- docker
 language: node
-
 deploy:
-  provider:gae
+  provider: gae
   project: hello-world-service
   keyfile: gce.json
   verbosity: debug
   on: master
+before_install:
+- openssl aes-256-cbc -K $encrypted_62dbd0a95cc5_key -iv $encrypted_62dbd0a95cc5_iv
+  -in gce.json.enc -out gce.json -d
