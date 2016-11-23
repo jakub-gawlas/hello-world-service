@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+language: node
+
+deploy:
+  provider:gae
+  project: hello-world-service
+  keyfile: gce.json
+  verbosity: debug
+  on: master
